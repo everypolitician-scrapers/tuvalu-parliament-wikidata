@@ -5,6 +5,6 @@ require 'pry'
 require 'wikidata/fetcher'
 
 names = EveryPolitician::Wikidata.morph_wikinames(source: 'tmtmtmtm/tuvalu-parliament-wikipedia', column: 'wikiname')
-EveryPolitician::Wikidata.scrape_wikidata(names: { en: names }, output: true)
-# warn EveryPolitician::Wikidata.notify_rebuilder
+EveryPolitician::Wikidata.scrape_wikidata(names: { en: names }, output: false)
+warn EveryPolitician::Wikidata.notify_rebuilder
 
